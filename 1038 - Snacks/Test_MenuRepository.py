@@ -10,8 +10,8 @@ def test_set_menu_item():
     menu1 = Menu(1, "Test 1", 10)
     menu2 = Menu(2, "Test 2", 5)
     menu3 = Menu(3, "Test 3", 2)
+    
     # Act
-
     menu_repository.set_menu_item(menu1)
     menu_repository.set_menu_item(menu2)
 
@@ -28,8 +28,8 @@ def test_check_if_itens_exists():
     menu1 = Menu(1, "Test 1", 10)
     order1 = Order(1, 10)
     order2 = Order(2, 10)
+    
     # Act
-
     menu_repository.set_menu_item(menu1)
     resultOK = menu_repository.check_if_itens_exists(order1)
     resultNOK = menu_repository.check_if_itens_exists(order2)
