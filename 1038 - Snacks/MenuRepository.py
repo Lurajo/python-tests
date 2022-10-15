@@ -1,9 +1,11 @@
+from typing import List
+
 from Menu import Menu
 from Order import Order
 
 
 class MenuRepository:
-    menu_itens: Menu = []
+    menu_itens: List[Menu] = []
 
     def __init__(self) -> None:
         pass
@@ -22,6 +24,8 @@ class MenuRepository:
         for item in self.menu_itens:
             if (order.code == item.code):
                 return item.price * order.quantity
+        
+        return 0
 
     def __str__(self) -> str:
         formatText = "{0:<10} {1:<20} {2:<20}\n"
