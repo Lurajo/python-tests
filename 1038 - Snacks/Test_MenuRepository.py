@@ -1,5 +1,6 @@
 from Menu import Menu
 from MenuRepository import MenuRepository
+from Order import Order
 
 
 def test_set_menu_item():
@@ -25,11 +26,13 @@ def test_check_if_itens_exists():
     menu_repository = MenuRepository()
     menu_repository.menu_itens = []
     menu1 = Menu(1, "Test 1", 10)
+    order1 = Order(1, 10)
+    order2 = Order(2, 10)
     # Act
 
     menu_repository.set_menu_item(menu1)
-    resultOK = menu_repository.check_if_itens_exists(1)
-    resultNOK = menu_repository.check_if_itens_exists(2)
+    resultOK = menu_repository.check_if_itens_exists(order1)
+    resultNOK = menu_repository.check_if_itens_exists(order2)
 
     # Assert
     assert len(menu_repository.menu_itens) == 1
