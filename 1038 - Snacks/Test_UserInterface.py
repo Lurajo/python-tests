@@ -1,6 +1,3 @@
-from io import StringIO
-from sys import stdin
-
 from Menu import Menu
 from MenuRepository import MenuRepository
 from Order import Order
