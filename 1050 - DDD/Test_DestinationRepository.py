@@ -34,6 +34,7 @@ def test_check_if_option_exists():
     assert test_option1 == True
     assert test_option2 == False
 
+
 def test_get_destination_by_DDD():
     # Arrange
     repository = DestinationRepository()
