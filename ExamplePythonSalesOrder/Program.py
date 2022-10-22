@@ -32,7 +32,7 @@ product_repository.append_product(product4)
 
 # order_repository = OrderRepository()
 
-order = Order(1, customer3, datetime.today)
+order = Order(1, customer3, datetime.today())
 order_product1 = OrderProduct()
 order_product2 = OrderProduct()
 print(order_product1.add_product(product2, 5))
